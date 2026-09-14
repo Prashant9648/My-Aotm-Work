@@ -1,105 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Plus</title>
 
-    <title>Sustainable Energy</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    <style>
+header{
+ height:80px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:0 7%;
+ background:white;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.logo{
+ font-size:30px;
+ font-weight:bold;
+ color:#176044;
+}
+.logo span{color:#f2c33d}
 
-        header {
-            height: 90px;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+.menu-btn{
+ font-size:32px;
+ color:#176044;
+ cursor:pointer;
+}
 
-        .logo img {
-            width: 120px;
-        }
+.menu{
+ display:none;
+ background:white;
+ padding:30px 7%;
+}
 
-        /* Menu initially hidden */
-        nav {
-            display: none;
-            position: absolute;
-            right: 30px;
-            top: 80px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
+.menu.show{display:block}
 
-        /* Menu open */
-        nav.show {
-            display: block;
-        }
+.menu a{
+ display:block;
+ padding:18px 0;
+ text-decoration:none;
+ color:#222;
+ font-size:22px;
+ border-bottom:1px solid #ddd;
+}
 
-        nav a {
-            display: block;
-            text-decoration: none;
-            color: #222;
-            padding: 10px 20px;
-        }
+.hero{
+ height:600px;
+ padding:100px 7%;
+ background:linear-gradient(#145c4bbb,#145c4bbb),
+ url("energy.jpg") center/cover;
+ color:white;
+}
 
-        nav a:hover {
-            color: green;
-        }
+.hero h1{
+ font-size:55px;
+ max-width:600px;
+ margin:20px 0;
+}
 
-        .menu {
-            font-size: 25px;
-            cursor: pointer;
-        }
+.hero h1 span{color:#f2c33d}
 
-    </style>
+.hero p{
+ font-size:19px;
+ max-width:550px;
+ line-height:1.6;
+}
+
+.btn{
+ display:inline-block;
+ margin-top:30px;
+ padding:15px 25px;
+ background:#39964e;
+ color:white;
+ text-decoration:none;
+ border-radius:6px;
+}
+</style>
 </head>
 
 <body>
 
-    <header>
+<header>
 
-        <!-- Logo -->
-        <div class="logo">
-            <img src="logo1.png" alt="Sustainable Energy">
-        </div>
+<div class="logo">
+GREEN <span>PLUS</span>
+</div>
 
-        <!-- Menu -->
-        <div class="menu" onclick="openMenu()">
-            ☰
-        </div>
+<div class="menu-btn" onclick="showMenu()">☰</div>
 
-    </header>
+</header>
 
+<div class="menu" id="menu">
 
-    <!-- Hidden Menu -->
-    <nav id="myMenu">
+<a href="#">Home</a>
+<a href="solar.html">Solar Energy</a>
+<a href="wind.html">Wind Energy</a>
+<a href="lifestyle.html">Green Lifestyle</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
 
-        <a href="index.html">Home</a>
-        <a href="solar.html">Solar Energy</a>
-        <a href="wind.html">Wind Power</a>
-        <a href="lifestyle.html">Green Lifestyle</a>
+</div>
 
-    </nav>
+<section class="hero">
 
+<p>🌱 SUSTAINABLE ENERGY</p>
 
-    <script>
+<h1>
+Energy for a <span>Greener</span> Tomorrow
+</h1>
 
-        function openMenu() {
-            document.getElementById("myMenu").classList.toggle("show");
-        }
+<p>
+Discover clean energy and simple green choices
+for a better and healthier planet.
+</p>
 
-    </script>
+<a href="solar.html" class="btn">Explore Solar</a>
+
+</section>
+
+<script>
+
+function showMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+</script>
 
 </body>
-
 </html>
